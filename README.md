@@ -42,5 +42,3 @@ In this thrilling co-op game, players find themselves aboard a spaceship, tasked
 ---
 
 ![Gameplay GIF](path-to-image/gameplay.gif)
-
-Feel free to contribute or provide feedback to make this project even better!
