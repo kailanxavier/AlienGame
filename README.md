@@ -1,6 +1,6 @@
 # 🚀 **Alien Game**
 
-![Game Banner](path-to-image/banner.png)
+![Game Banner](READMEAssets/gamebanner.png)
 
 ## 🌟 **Overview**
 In this thrilling co-op game, players find themselves aboard a spaceship, tasked with completing objectives while avoiding an evil alien enemy roaming the ship. Work together to gather materials, build a weapon, and take down the alien!
@@ -41,4 +41,4 @@ In this thrilling co-op game, players find themselves aboard a spaceship, tasked
 
 ---
 
-![Gameplay GIF](path-to-image/gameplay.gif)
+![Gameplay GIF](READMEAssets/aliengameplay.gif)
