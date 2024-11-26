@@ -1,4 +1,4 @@
-# **Titleless Alien Game**
+# **Concept**
 
 ## **Overview**
 In this thrilling co-op game, players find themselves aboard a spaceship, tasked with completing objectives while avoiding an evil alien enemy roaming the ship. Work together to gather materials, build a weapon, and take down the alien!
