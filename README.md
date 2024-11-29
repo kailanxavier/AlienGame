@@ -10,7 +10,7 @@ In this thrilling co-op game, players find themselves aboard a spaceship, tasked
 ## 📜 **Table of Contents**
 - [Overview](#overview)
 - [Gameplay Mechanics](#gameplay-mechanics)
-- [Tasks (Objectives)](#tasks-objectives)
+- [Objectives](#tasks-objectives)
 - [Key Features](#key-features)
 
 ---
@@ -25,11 +25,24 @@ In this thrilling co-op game, players find themselves aboard a spaceship, tasked
 
 ## 🛠️ **Tasks (Objectives)**
 
-| Task Type     | Description                                      |
-|---------------|--------------------------------------------------|
-| **Hacking**   | Solve a digital puzzle to access new areas.      |
-| **Wires**     | Arrange wires to match a target voltage of 46.   |
-| **Lighting**  | Two-player task to restore ship's lights.        |
+### 1 Player Objectives
+
+| **Objective**                   | **Description**                             |
+|---------------------------------|---------------------------------------------|
+| **Hacking Task**                |                                             |
+| **Wires**                       | Arrange the wires to add the voltage to 46  |
+| **Oxygen Fix Vent System**      | Re-arrange the vents to connect             |
+| **Decode Alien Communication**  |                                             |
+| **Alien Parts in Tubes**        | Stop them from escaping by completing puzzles |
+| **Calibrate Ship's Weapon System** | Allow 2 player shooting down meteor task   |
+
+### 2 Player Objectives
+
+| **Objective**                                 | **Description**                                                                 |
+|-----------------------------------------------|---------------------------------------------------------------------------------|
+| **Fix Lighting System**                       | Open the electricity box and pull down the lever. Both players hold the lever to fix lights. |
+| **Shoot Down the Approaching Meteor Shower**  | One player shoots meteors, the other repairs the ship.                          |
+
 
 ---
 
