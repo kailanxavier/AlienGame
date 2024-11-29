@@ -357,10 +357,12 @@ MonoBehaviour:
   canUseHeadbob: 1
   willSlideOnSlopes: 1
   canZoom: 1
+  canInteract: 1
   sprintKey: 304
   jumpKey: 32
   crouchKey: 306
   zoomKey: 324
+  interactKey: 101
   walkSpeed: 3
   sprintSpeed: 6
   crouchSpeed: 1.5
@@ -386,6 +388,11 @@ MonoBehaviour:
   crouchBobAmount: 0.025
   timeToZoom: 0.3
   zoomFOV: 40
+  interactionRayPoint: {x: 0.5, y: 0.5, z: 0}
+  interactDistance: 2
+  interactionLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &152539552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,7 +1552,8 @@ GameObject:
   - component: {fileID: 1495582583}
   - component: {fileID: 1495582582}
   - component: {fileID: 1495582581}
-  m_Layer: 0
+  - component: {fileID: 1495582585}
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1638,6 +1646,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1495582585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495582580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3695a3bc025bca40b83de0eb7b0f684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593093251
 GameObject:
   m_ObjectHideFlags: 0

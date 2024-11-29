@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private bool canUseHeadbob = true;
     [SerializeField] private bool willSlideOnSlopes = true;
     [SerializeField] private bool canZoom = true;
+    [SerializeField] private bool canInteract = true;
 
 
     [Header("Controls: ")]
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private KeyCode jumpKey = KeyCode.Space;
     [SerializeField] private KeyCode crouchKey = KeyCode.LeftControl;
     [SerializeField] private KeyCode zoomKey = KeyCode.Mouse1;
+    [SerializeField] private KeyCode interactKey = KeyCode.E;
 
     [Header("Movement Parameters: ")]
     [SerializeField] private float walkSpeed = 3.0f;
@@ -92,6 +94,13 @@ public class PlayerMovement : MonoBehaviour {
     }
 
 
+    [Header("Interaction: ")]
+    [SerializeField] private Vector3 interactionRayPoint = default;
+    [SerializeField] private float interactDistance = default;
+    [SerializeField] private LayerMask interactionLayer;
+    private Interactable currentInteractable;
+
+
     private Camera playerCamera;
     private CharacterController characterController;
 
@@ -126,6 +135,12 @@ public class PlayerMovement : MonoBehaviour {
 
             if (canZoom)
                 HandleZoom();
+
+            if (canInteract) { 
+                HandleInteractionCheck();
+                HandleInteractionInput();
+            }
+
 
             ApplyFinalMovement();
         }
@@ -216,6 +231,31 @@ public class PlayerMovement : MonoBehaviour {
 
                 zoomRoutine = StartCoroutine(ToggleZoom(false));
             }
+        }
+    }
+
+    private void HandleInteractionCheck() {
+
+        // Check if object is interactable, this is checking all layers on purpose making it impossible to interact with interactables through other colliders.
+        if (Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactDistance)) {
+
+            // Checks if currentInteractable is on layer 6 and if new currentInteractable is NOT currentInteracle.
+            if (hit.collider.gameObject.layer == 6 && (currentInteractable == null || hit.collider.gameObject.GetInstanceID() != currentInteractable.GetInstanceID())) {
+                hit.collider.TryGetComponent(out currentInteractable);
+
+                if (currentInteractable)
+                    currentInteractable.OnFocus();
+            }
+
+            // This checks if currentInteractable should lose focus. If it loses focus it goes back to null state.
+        } else if (currentInteractable) {
+            currentInteractable.OnLoseFocus();
+            currentInteractable = null;
+        }
+    }
+    private void HandleInteractionInput() {
+        if (Input.GetKeyDown(interactKey) && currentInteractable != null && Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint), out RaycastHit hit, interactDistance, interactionLayer)) {
+            currentInteractable.OnInteract();
         }
     }
 
