@@ -10,8 +10,14 @@ In this thrilling co-op game, players find themselves aboard a spaceship, tasked
 ## 📜 **Table of Contents**
 - [Overview](#overview)
 - [Gameplay Mechanics](#gameplay-mechanics)
-- [Objectives](#tasks-objectives)
+- [Objectives](#objectives)
 - [Key Features](#key-features)
+
+---
+
+## 🌟 **Overview**
+
+In this thrilling co-op game, players find themselves aboard a spaceship, tasked with completing objectives while avoiding an evil alien enemy roaming the ship. Work together to gather materials, build a weapon, and take down the alien!
 
 ---
 
@@ -23,7 +29,7 @@ In this thrilling co-op game, players find themselves aboard a spaceship, tasked
 
 ---
 
-## 🛠️ **Tasks (Objectives)**
+## 🛠️ **Objectives**
 
 ### 1 Player Objectives
 
@@ -42,7 +48,6 @@ In this thrilling co-op game, players find themselves aboard a spaceship, tasked
 |-----------------------------------------------|---------------------------------------------------------------------------------|
 | **Fix Lighting System**                       | Open the electricity box and pull down the lever. Both players hold the lever to fix lights. |
 | **Shoot Down the Approaching Meteor Shower**  | One player shoots meteors, the other repairs the ship.                          |
-
 
 ---
 
